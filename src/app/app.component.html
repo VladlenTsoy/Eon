@@ -1,68 +1,7 @@
 <nz-layout class="layout">
-  <nz-header class="header">
-    <div class="header-top">
-      <ul nz-menu [nzMode]="'horizontal'" class="navigation navigation-icon">
-        <li nz-menu-item>
-          <a href="https://www.facebook.com/EonTashkent/" target="_blank">
-            <i nz-icon type="facebook" theme="outline"></i>
-          </a>
-        </li>
-        <li nz-menu-item>
-          <a href="" target="_blank">
-            <i nz-icon type="instagram" theme="outline"></i>
-          </a>
-        </li>
-        <li nz-menu-item>
-          <a href="" target="_blank">
-            <i nz-icon type="youtube" theme="outline"></i>
-          </a>
-        </li>
-        <li nz-menu-item>
-          <a href="" target="_blank">
-            <i nz-icon type="github" theme="outline"></i>
-          </a>
-        </li>
-      </ul>
-
-      <ul nz-menu [nzMode]="'horizontal'" class="navigation navigation-contacts">
-        <li nz-menu-item>
-          <i nz-icon type="environment" theme="outline"></i>Мирабадский р-н Госпитальный массив д. 2-18
-        </li>
-        <li nz-menu-item>
-          <i nz-icon type="phone" theme="outline"></i>+99890 911 24 21 / +99891 163 85 55
-        </li>
-        <li nz-menu-item>
-          <span class="badge"><i nz-icon type="notification" theme="outline"></i>Запись на пробный урок</span>
-        </li>
-      </ul>
-    </div>
-    <div class="header-nav">
-      <div class="logo">
-        <img src="assets/images/logo.svg" alt="">
-      </div>
-      <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" class="navigation">
-        <li nz-menu-item><i nz-icon type="home" theme="outline"></i>Главная</li>
-        <li nz-submenu>
-          <span title><i nz-icon type="bulb" theme="outline"></i> Обучение</span>
-          <ul>
-            <li nz-menu-group>
-              <ul>
-                <li nz-menu-item>Ментальная арифметика</li>
-                <li nz-menu-item>Мнемотехника</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li nz-menu-item><i nz-icon type="shopping" theme="outline"></i>Магазин</li>
-        <li nz-menu-item><i nz-icon type="message" theme="outline"></i>Форум</li>
-        <li nz-menu-item><i nz-icon type="user" theme="outline"></i>Кабинет</li>
-        <li nz-menu-item><i nz-icon type="phone" theme="outline"></i>Контакты</li>
-      </ul>
-    </div>
-  </nz-header>
+  <app-header></app-header>
   <nz-content style="padding:0 50px;">
-
-
+    <router-outlet></router-outlet>
   </nz-content>
-  <nz-footer style="text-align: center;"></nz-footer>
+  <app-footer></app-footer>
 </nz-layout>

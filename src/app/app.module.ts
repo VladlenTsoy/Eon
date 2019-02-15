@@ -9,12 +9,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
 import ru from '@angular/common/locales/ru';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
+import { SidebarComponent } from './layouts/sidebar/sidebar.component';
+import { HomeComponent } from './home/home.component';
+import { StoreComponent } from './store/store.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { DisciplinesComponent } from './disciplines/disciplines.component';
+import { MnemonicsComponent } from './disciplines/mnemonics/mnemonics.component';
 
 registerLocaleData(ru);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
+    HomeComponent,
+    StoreComponent,
+    ContactsComponent,
+    DisciplinesComponent,
+    MnemonicsComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +41,7 @@ registerLocaleData(ru);
     BrowserAnimationsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: ru_RU }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SidebarComponent]
 })
 export class AppModule { }
