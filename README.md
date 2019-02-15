@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# Eon
 Eon - development of intelligence
 =======
 # Home
