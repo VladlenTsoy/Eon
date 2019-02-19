@@ -1,7 +1,12 @@
 <nz-layout class="layout">
   <app-header></app-header>
-  <nz-content style="padding:0 50px;">
+  <nz-content class="content">
     <router-outlet></router-outlet>
   </nz-content>
+  <div class="scroll-top" *ngIf="stateButtonToTop">
+    <button nz-button nzType="primary" (click)="scrollToTop($event)" nzSize="large" nzShape="circle">
+      <i nz-icon type="arrow-up" theme="outline"></i>
+    </button>
+  </div>
   <app-footer></app-footer>
 </nz-layout>

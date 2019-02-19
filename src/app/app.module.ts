@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgZorroAntdModule, NZ_I18N, ru_RU } from 'ng-zorro-antd';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { registerLocaleData } from '@angular/common';
@@ -17,6 +17,8 @@ import { StoreComponent } from './store/store.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { DisciplinesComponent } from './disciplines/disciplines.component';
 import { MnemonicsComponent } from './disciplines/mnemonics/mnemonics.component';
+import { NavigationComponent } from './layouts/header/navigation/navigation.component';
+import { RecordComponent } from './record/record.component';
 
 registerLocaleData(ru);
 
@@ -30,13 +32,16 @@ registerLocaleData(ru);
     StoreComponent,
     ContactsComponent,
     DisciplinesComponent,
-    MnemonicsComponent
+    MnemonicsComponent,
+    NavigationComponent,
+    RecordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgZorroAntdModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule
   ],

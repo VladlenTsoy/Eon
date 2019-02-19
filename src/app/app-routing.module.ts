@@ -5,6 +5,7 @@ import {ContactsComponent} from './contacts/contacts.component';
 import {StoreComponent} from './store/store.component';
 import {DisciplinesComponent} from './disciplines/disciplines.component';
 import {MnemonicsComponent} from './disciplines/mnemonics/mnemonics.component';
+import {RecordComponent} from './record/record.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'disciplines/mnemonics', component: MnemonicsComponent},
   {path: 'store', component: StoreComponent},
   {path: 'contacts', component: ContactsComponent},
+  {path: 'record/:type', component: RecordComponent},
 ];
 
 // @ts-ignore
