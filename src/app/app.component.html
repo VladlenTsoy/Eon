@@ -1,7 +1,9 @@
 <nz-layout class="layout">
   <app-header></app-header>
   <nz-content class="content">
-    <router-outlet></router-outlet>
+    <nz-spin [nzSpinning]="loadingRouter">
+      <router-outlet></router-outlet>
+    </nz-spin>
   </nz-content>
   <div class="scroll-top" *ngIf="stateButtonToTop">
     <button nz-button nzType="primary" (click)="scrollToTop($event)" nzSize="large" nzShape="circle">

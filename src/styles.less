@@ -542,15 +542,16 @@
 @list-item-meta-title-margin-bottom: @padding-sm;
 
 /* You can add global styles to this file, and also import other style files */
-
 .block {
-  margin-top: 7rem;
-  margin-bottom: 7rem;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
 
   .title-block {
     color: @primary-color;
     font-size: 35px;
+    line-height: 35px;
     font-weight: 900;
+    margin-bottom: 2rem;
   }
 }
 
@@ -567,4 +568,13 @@
   border: 0;
   border-radius: 15px;
   margin-bottom: 1rem;
+}
+
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .block .title-block{
+    font-size: 30px;
+    line-height: 30px;
+  }
 }

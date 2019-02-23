@@ -1,4 +1,5 @@
 import {Component, HostListener} from '@angular/core';
+import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterEvent} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,17 @@ import {Component, HostListener} from '@angular/core';
 })
 export class AppComponent {
   stateButtonToTop = false;
+  loadingRouter = true;
+
+  constructor(private router: Router) {
+    router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event);
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   scrollMe(event) {
-    if (window.scrollY > 500)
-      this.stateButtonToTop = true;
-    else
-      this.stateButtonToTop = false;
+    this.stateButtonToTop = window.scrollY > 500;
   }
 
   scrollToTop(event) {
@@ -24,6 +29,20 @@ export class AppComponent {
       } else {
         window.clearInterval(scrollToTop);
       }
-    }, 9);
+    }, 5);
+  }
+
+  // Shows and hides the loading spinner during RouterEvent changes
+  navigationInterceptor(event: RouterEvent): void {
+    if (event instanceof NavigationStart)
+      this.loadingRouter = true;
+    if (event instanceof NavigationEnd)
+      this.loadingRouter = false;
+
+    // Set loading state to false in both of the below events to hide the spinner in case a request fails
+    if (event instanceof NavigationCancel)
+      this.loadingRouter = false;
+    if (event instanceof NavigationError)
+      this.loadingRouter = false;
   }
 }
