@@ -21,6 +21,7 @@ import {NavigationComponent} from './layouts/header/navigation/navigation.compon
 import {RecordComponent} from './record/record.component';
 import { MentalArithmeticComponent } from './disciplines/mental-arithmetic/mental-arithmetic.component';
 import { EnglishMnemonicsComponent } from './disciplines/english-mnemonics/english-mnemonics.component';
+import { AgmCoreModule } from '@agm/core';
 
 registerLocaleData(ru);
 
@@ -48,6 +49,9 @@ registerLocaleData(ru);
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBSNRntfWg3WQpwR8JWs_36lIXUFbIKpcI'
+    }),
   ],
   providers: [{provide: NZ_I18N, useValue: ru_RU}],
   bootstrap: [AppComponent],

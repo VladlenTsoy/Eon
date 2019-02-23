@@ -12,7 +12,7 @@
         <nz-form-item>
           <nz-form-label nzFor="discipline" nzRequired>Дисциплина</nz-form-label>
           <nz-form-control>
-            <nz-select id="discipline" nzShowSearch nzAllowClear formControlName="discipline">
+            <nz-select id="discipline" (ngModelChange)="changeCategory($event)" nzShowSearch nzAllowClear formControlName="discipline">
               <nz-option nzLabel="Ментальная арифметика" nzValue="1"></nz-option>
               <nz-option nzLabel="Мнемотехника" nzValue="2"></nz-option>
               <nz-option nzLabel="Английский язык при помощи мнемотехники" nzValue="3"></nz-option>
@@ -25,9 +25,9 @@
           <nz-form-control>
             <nz-select id="category" nzShowSearch nzAllowClear nzPlaceHolder="" formControlName="category">
               <nz-option nzLabel="Дети (с 9 до 12 лет)" nzValue="1"></nz-option>
-              <nz-option nzLabel="Подростки (с 12 до 17 лет)" nzValue="2"></nz-option>
-              <nz-option nzLabel="Взрослые (Днем)" nzValue="3"></nz-option>
-              <nz-option nzLabel="Взрослые (Вечером)" nzValue="4"></nz-option>
+              <nz-option [nzDisabled]="requestForm.get('discipline').value != 2" nzLabel="Подростки (с 12 до 17 лет)" nzValue="2"></nz-option>
+              <nz-option [nzDisabled]="requestForm.get('discipline').value != 2" nzLabel="Взрослые (Днем)" nzValue="3"></nz-option>
+              <nz-option [nzDisabled]="requestForm.get('discipline').value != 2" nzLabel="Взрослые (Вечером)" nzValue="4"></nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>

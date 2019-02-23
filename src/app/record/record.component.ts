@@ -19,13 +19,13 @@ export class RecordComponent implements OnInit {
     private trialLesson: TrialLessonService,
     private message: NzMessageService
   ) {
-    this.activateRoute.params.subscribe(params => this.changeType(params['discipline'], params['type']));
+    this.activateRoute.params.subscribe(params => this.changeDiscipline(params['discipline'], params['type']));
   }
 
   ngOnInit() {
   }
 
-  changeType(discipline, type) {
+  changeDiscipline(discipline, type) {
     this.requestForm = this.fb.group({
       discipline: [discipline, [Validators.required]],
       category: [type, [Validators.required]],
@@ -35,6 +35,12 @@ export class RecordComponent implements OnInit {
       phoneNumberPrefix: ['+998'],
       phoneNumber: [null, [Validators.required]],
     });
+  }
+
+  changeCategory(event: string) {
+    if (event === '2')
+      return;
+    this.requestForm.controls.category.setValue('1');
   }
 
   submitForm(): void {

@@ -1,3 +1,47 @@
-<p>
-  contacts works!
-</p>
+<nz-row nzType="flex" class="contacts block">
+  <nz-col nzXs="24">
+    <h1 class="title-block">Контакты</h1>
+  </nz-col>
+
+  <nz-col nzLg="16" nzMd="12" nzSm="24" nzXs="24" class="block-map">
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+  </nz-col>
+  <nz-col nzLg="8" nzMd="12" nzSm="24" nzXs="24">
+    <div class="content-block markdown">
+      <nz-card class="card">
+        <div class="inf-block">
+          <h2><i nz-icon type="bank" theme="outline"></i>Город</h2>
+          <nz-select class="country" nzShowSearch nzAllowClear nzPlaceHolder="Выберите город">
+            <nz-option nzLabel="Ташкент" nzValue="1"></nz-option>
+          </nz-select>
+        </div>
+
+        <div class="inf-block">
+          <h2><i nz-icon type="environment" theme="outline"></i>Адрес:</h2>
+          <ul>
+            <li>Мирабадский р-н Госпитальный массив д. 2-18</li>
+          </ul>
+        </div>
+
+        <div class="inf-block">
+          <h2><i nz-icon type="phone" theme="outline"></i>Контакты:</h2>
+          <ul>
+            <li>+998 90 911 24 21</li>
+            <li>+998 91 163 85 55</li>
+          </ul>
+        </div>
+
+        <div class="inf-block">
+          <h2><i nz-icon type="mail" theme="outline"></i>Почта:</h2>
+          <ul>
+            <li><b>Осноная:</b> info@eon.uz</li>
+            <li><b>Тех. поддержка:</b> support@eon.uz</li>
+            <li><b>Предложения:</b> partner@eon.uz</li>
+          </ul>
+        </div>
+      </nz-card>
+    </div>
+  </nz-col>
+</nz-row>
