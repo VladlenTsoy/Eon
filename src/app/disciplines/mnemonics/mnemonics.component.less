@@ -1,0 +1,313 @@
+.welcome {
+  padding: 3vh 0px;
+
+  .block-content {
+    padding: 9em 0;
+    background: url(/assets/images/illustrations/undraw_creative_thinking_b3bc.svg) no-repeat left;
+    background-size: contain;
+    text-align: right;
+
+    .title {
+      font-size: 40px;
+      font-weight: bolder;
+      text-transform: uppercase;
+      color: #3f3d56;
+      line-height: 65px;
+
+      .highlight {
+        color: #b13038;
+        font-size: 90px;
+      }
+    }
+  }
+}
+
+.benefits {
+  .block-content {
+    text-align: center;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+
+    .image {
+      width: 80%;
+      margin-bottom: 2rem;
+      height: 200px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #3f3d56;
+      margin-bottom: 1rem;
+      line-height: 20px;
+    }
+  }
+}
+
+.working {
+  .theory {
+    padding: 22vh 0;
+    position: relative;
+
+    .bg-theory {
+      position: absolute;
+      top: 0;
+      left: -50px;
+      right: 0;
+      bottom: 0;
+      background: url(/assets/images/illustrations/undraw_in_thought_gjsf.svg) no-repeat calc(45% - 500px) center;
+      background-size: contain;
+    }
+  }
+
+  .practice {
+    padding: 22vh 0;
+    position: relative;
+
+    .bg-practice {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: calc(-300px - -10%);
+      bottom: 0;
+      background: url("/assets/images/illustrations/undraw_skateboarding_929d.svg") no-repeat right center;
+      background-size: contain;
+    }
+  }
+
+  .homework {
+    padding: 22vh 0;
+    position: relative;
+
+    .bg-homework {
+      position: absolute;
+      top: 0;
+      left: calc(-500px - -30vw);
+      right: 0;
+      bottom: 0;
+      background: url("/assets/images/illustrations/undraw_studying_s3l7.svg") no-repeat left;
+      background-size: contain;
+    }
+  }
+
+  .genius {
+    padding: 22vh 0;
+    position: relative;
+
+    .bg-genius {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: calc(-500px - -8vw);
+      bottom: 0;
+      background: url("/assets/images/illustrations/undraw_finish_line_katerina_limpitsouni_xy20.svg") no-repeat right center;
+      background-size: contain;
+    }
+  }
+}
+
+.prices {
+  .price {
+    .card {
+      border-radius: 5px;
+      padding-top: 1.5rem;
+      position: relative;
+      z-index: 2;
+      box-shadow: none;
+
+      .title {
+        line-height: 25px;
+        font-weight: bolder;
+        font-size: 35px;
+        height: 55px;
+
+        .age {
+          font-size: 16px;
+          color: #b13038;
+        }
+      }
+
+      .delay {
+        margin: 0 0 2rem;
+
+        b {
+          color: rgba(0, 0, 0, .45);
+        }
+      }
+
+      .price-cost {
+        font-weight: 900;
+        color: #3f3d56;
+        margin: 0 0 1rem;
+        font-size: 42px;
+      }
+
+      .mouth {
+      }
+
+      .ant-btn {
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .sub-button {
+        margin-bottom: 0;
+        color: rgba(0, 0, 0, .45);
+      }
+    }
+  }
+
+  .price:hover {
+    .card {
+      transform: scale(1.1);
+      z-index: 4;
+    }
+  }
+}
+
+.teachers {
+  .teacher {
+    text-align: center;
+
+    .photo {
+      overflow: hidden;
+      border-radius: 50%;
+      border: 8px solid #fff;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+
+      img {
+        width: 100%
+      }
+    }
+
+    .block-content {
+      .title {
+        font-size: 20px;
+        font-weight: 900;
+        color: #3f3d56;
+        margin-bottom: 0rem;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .welcome .block-content {
+    .title {
+      font-size: 40px;
+      line-height: 67px;
+
+      .highlight {
+        font-size: 90px;
+
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .welcome {
+    margin-left: -15px;
+
+    .block-content {
+      background: url(/assets/images/illustrations/undraw_creative_thinking_b3bc.svg) no-repeat -21vw;
+      background-size: contain;
+
+      .title {
+        font-size: 30px;
+        line-height: 50px;
+
+        .highlight {
+          font-size: 67px;
+
+        }
+      }
+    }
+  }
+
+  .working {
+    .theory {
+      padding: 2vh 0;
+
+      .bg-theory {
+        position: relative;
+        left: -15px;
+        background: url(/assets/images/illustrations/undraw_in_thought_gjsf.svg) no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .practice {
+      padding: 2vh 0;
+
+      .bg-practice {
+        position: relative;
+        right: 0;
+        background: url(/assets/images/illustrations/undraw_skateboarding_929d.svg) no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .homework {
+      padding: 2vh 0;
+
+      .bg-homework {
+        position: relative;
+        left: 0;
+        background: url(/assets/images/illustrations/undraw_studying_s3l7.svg) no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .genius {
+      padding: 2vh 0;
+
+      .bg-genius {
+        position: relative;
+        left: 0;
+        background: url("/assets/images/illustrations/undraw_finish_line_katerina_limpitsouni_xy20.svg") no-repeat center;
+        background-size: contain;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .welcome .block-content {
+    padding: 8em 0;
+    background: url(/assets/images/illustrations/undraw_creative_thinking_b3bc.svg) no-repeat -21vw;
+    background-size: contain;
+
+    .title {
+      font-size: 20px;
+      line-height: 35px;
+
+      .highlight {
+        font-size: 45px;
+
+      }
+    }
+  }
+}

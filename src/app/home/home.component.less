@@ -1,0 +1,134 @@
+.welcome {
+  margin-top: 1rem;
+
+  .block-content {
+    text-align: center;
+    font-size: 50px;
+    line-height: 55px;
+    color: #3f3d56;
+    padding: 33vh 0;
+    font-weight: bold;
+    background: url("/assets/images/illustrations/undraw_about_me_wa29.svg") no-repeat center;
+    background-size: contain;
+
+    p {
+      position: relative;
+      margin-bottom: 0;
+      top: -55px;
+    }
+  }
+}
+
+.about-us {
+  .block-image {
+    margin-bottom: 2rem;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .block-content {
+    padding-left: 3rem;
+
+    p {
+    }
+  }
+}
+
+.disciplines {
+  .discipline {
+    padding: 0 0.5rem;
+
+    .image {
+      width: 70%;
+      margin-bottom: 1.5rem;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #3f3d56;
+      margin-bottom: 1rem;
+      line-height: 20px;
+    }
+
+    //p:last-child {
+    //  margin-bottom: 0;
+    //}
+  }
+}
+
+.progress {
+  .block-content {
+    padding: 2rem 1rem 0;
+
+    .title {
+      font-size: 20px;
+      font-weight: 900;
+      color: #3f3d56;
+      margin-bottom: 0.5rem;
+      line-height: 20px;
+    }
+  }
+}
+
+.partners {
+  .partner {
+    filter: grayscale(100%);
+    padding: 1rem 1.5rem;
+    transition: all 0.5s linear;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .partner:hover {
+    filter: grayscale(0);
+  }
+}
+
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .welcome .block-content {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .about-us .block-content {
+    padding-left: 0;
+  }
+
+  .disciplines .discipline{
+    .card{
+      box-shadow: none;
+
+      .block-content{
+        margin: 0 -24px;
+      }
+    }
+
+  }
+
+  .partners .partner {
+    padding: 1rem 0.5rem;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .welcome .block-content {
+    font-size: 30px;
+    line-height: 35px;
+    padding: 12vh 0;
+  }
+}

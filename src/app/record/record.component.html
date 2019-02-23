@@ -1,0 +1,76 @@
+<div nz-row nzType="flex" nzAlign="middle" nzJustify="center" class="record block">
+  <div nz-col nzLg="24">
+    <h2 class="title-block">
+      Запись на пробный урок
+    </h2>
+  </div>
+
+  <div nz-col nzLg="8" class="profile markdown">
+    <nz-card class="card">
+      <h2>Заполните анкету</h2>
+      <form nz-form [formGroup]="requestForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-label nzFor="discipline" nzRequired>Дисциплина</nz-form-label>
+          <nz-form-control>
+            <nz-select id="discipline" nzShowSearch nzAllowClear formControlName="discipline">
+              <nz-option nzLabel="Ментальная арифметика" nzValue="1"></nz-option>
+              <nz-option nzLabel="Мнемотехника" nzValue="2"></nz-option>
+              <nz-option nzLabel="Английский язык при помощи мнемотехники" nzValue="3"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzFor="category" nzRequired>Категория</nz-form-label>
+          <nz-form-control>
+            <nz-select id="category" nzShowSearch nzAllowClear nzPlaceHolder="" formControlName="category">
+              <nz-option nzLabel="Дети (с 9 до 12 лет)" nzValue="1"></nz-option>
+              <nz-option nzLabel="Подростки (с 12 до 17 лет)" nzValue="2"></nz-option>
+              <nz-option nzLabel="Взрослые (Днем)" nzValue="3"></nz-option>
+              <nz-option nzLabel="Взрослые (Вечером)" nzValue="4"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzFor="city" nzRequired>Город</nz-form-label>
+          <nz-form-control>
+            <nz-select id="city" nzShowSearch nzAllowClear nzPlaceHolder="" formControlName="city">
+              <nz-option nzLabel="Ташкент" nzValue="1"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzFor="fullName" nzRequired>Имя</nz-form-label>
+          <nz-form-control>
+            <input nz-input type="text" id="fullName" formControlName="fullName">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzFor="email">Эл. почту</nz-form-label>
+          <nz-form-control>
+            <input nz-input type="email" id="email" formControlName="email">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-label nzFor="phoneNumber" nzRequired>Телефон</nz-form-label>
+          <nz-form-control [nzValidateStatus]="requestForm.controls['phoneNumber']">
+            <nz-input-group [nzAddOnBefore]="addOnBeforeTemplate">
+              <ng-template #addOnBeforeTemplate>
+                <nz-select formControlName="phoneNumberPrefix" style="width: 80px;">
+                  <nz-option nzLabel="+998" nzValue="+998"></nz-option>
+                </nz-select>
+              </ng-template>
+              <input formControlName="phoneNumber" id="phoneNumber'" nz-input>
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button nzBlock nzType="primary" [disabled]="requestForm.invalid" [nzLoading]="btnLoading" type="submit">Отправить</button>
+      </form>
+    </nz-card>
+  </div>
+</div>

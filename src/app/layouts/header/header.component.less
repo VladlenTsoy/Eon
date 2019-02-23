@@ -1,0 +1,164 @@
+// HEADER
+.header {
+  background: #ffffff;
+  height: auto;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .05);
+  position: relative;
+  z-index: 5;
+
+  .header-top {
+    display: flex;
+    border-bottom: 1px solid #e8e8e866;
+
+    .navigation {
+      line-height: 30px;
+      border-bottom: 0;
+
+      .ant-menu-item-selected, li:visited, li:hover {
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    .navigation-icon {
+      margin-right: auto;
+
+      li {
+        padding: 0 15px;
+
+        i {
+          margin: 0;
+          font-size: 16px;
+          min-width: 16px;
+        }
+      }
+
+      li:first-child {
+        padding: 0 15px 0 0;
+      }
+    }
+
+    .navigation-contacts {
+      li {
+        padding: 0 15px 0 15px;
+      }
+
+      li:last-child {
+        padding: 0 0 0 15px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #b13038;
+        color: #fff;
+        padding: 0 1rem;
+        border-radius: 15px;
+        margin: 2px 0;
+        height: 26px;
+        line-height: 25px;
+      }
+    }
+  }
+
+  .header-nav {
+    display: flex;
+
+    .logo {
+      width: 150px;
+      margin-right: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+
+  }
+}
+
+.header-mobile {
+  display: none;
+  background: #ffffff;
+  height: auto;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .05);
+  padding: 0;
+
+  .header-top {
+    display: flex;
+    border-bottom: 1px solid #e8e8e866;
+
+    .navigation {
+      line-height: 30px;
+      border-bottom: 0;
+
+      .ant-menu-item-selected, li:visited, li:hover {
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    .navigation-icon {
+      margin-right: auto;
+
+      li {
+        padding: 0 10px;
+
+        i {
+          margin: 0;
+        }
+      }
+    }
+
+    .navigation-contacts {
+      li {
+        padding: 0 15px 0 0;
+      }
+    }
+  }
+
+  .header-nav {
+    display: flex;
+    padding: 0 15px;
+    line-height: 50px;
+
+    .logo {
+      width: 120px;
+      margin-right: auto;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .navigation {
+      line-height: 50px;
+      border: 0;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  .header-mobile {
+    display: block;
+  }
+
+  .header {
+    display: none;
+  }
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  .header .header-top .navigation-contacts .badge {
+    display: none;
+  }
+}

@@ -1,0 +1,89 @@
+<nz-header class="header">
+  <div class="header-top">
+    <ul nz-menu [nzMode]="'horizontal'" class="navigation navigation-icon">
+      <li nz-menu-item>
+        <a href="https://www.facebook.com/EonTashkent/" target="_blank">
+          <i nz-icon type="facebook" theme="outline"></i>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a href="" target="_blank">
+          <i nz-icon type="instagram" theme="outline"></i>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a href="" target="_blank">
+          <i nz-icon type="youtube" theme="outline"></i>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a href="" target="_blank">
+          <i nz-icon type="github" theme="outline"></i>
+        </a>
+      </li>
+    </ul>
+
+    <ul nz-menu [nzMode]="'horizontal'" class="navigation navigation-contacts">
+      <li nz-menu-item>
+        <i nz-icon type="environment" theme="outline"></i>Мирабадский р-н Госпитальный массив д. 2-18
+      </li>
+      <li nz-menu-item>
+        <i nz-icon type="phone" theme="outline"></i>+99890 911 24 21 / +99891 163 85 55
+      </li>
+      <li nz-menu-item routerLink="/record">
+        <span class="badge"><i nz-icon type="notification" theme="outline"></i>Запись на пробный урок</span>
+      </li>
+    </ul>
+  </div>
+  <div class="header-nav">
+    <div class="logo" routerLink="">
+      <img src="assets/images/logo.svg" alt="">
+    </div>
+      <app-navigation [mode]="'horizontal'"></app-navigation>
+  </div>
+</nz-header>
+
+
+<nz-header class="header-mobile">
+  <div class="header-top">
+    <ul nz-menu [nzMode]="'horizontal'" class="navigation navigation-icon">
+      <li nz-menu-item>
+        <a href="https://www.facebook.com/EonTashkent/" target="_blank">
+          <i nz-icon type="facebook" theme="outline"></i>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a href="" target="_blank">
+          <i nz-icon type="instagram" theme="outline"></i>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a href="" target="_blank">
+          <i nz-icon type="youtube" theme="outline"></i>
+        </a>
+      </li>
+      <li nz-menu-item>
+        <a href="" target="_blank">
+          <i nz-icon type="github" theme="outline"></i>
+        </a>
+      </li>
+    </ul>
+
+    <ul nz-menu [nzMode]="'horizontal'" class="navigation navigation-contacts">
+      <li nz-menu-item>
+        <i nz-icon type="environment" theme="outline"></i>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon type="phone" theme="outline"></i>
+      </li>
+    </ul>
+  </div>
+  <div class="header-nav">
+    <div class="logo" routerLink="">
+      <img src="assets/images/logo.svg" alt="">
+    </div>
+    <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" class="navigation">
+      <li nz-menu-item (click)="openComponent()"><i nz-icon type="bars" theme="outline"></i>Меню</li>
+    </ul>
+  </div>
+</nz-header>
